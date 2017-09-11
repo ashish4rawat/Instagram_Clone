@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="disappearKeyboard"
+    tools:context="com.technical.testproject.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="disappearKeyboard"
+        app:srcCompat="@drawable/instagramlogo"/>
+
+    <EditText
+        android:id="@+id/usernameText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter your Username here.."
+        android:inputType="textPersonName"
+        android:layout_above="@+id/passwordText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/usernameText"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Enter your Password Here"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/passwordText"
+        android:layout_marginTop="30dp"
+        android:onClick="signUp"
+        android:text="Sign Up"/>
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/signUpButton"
+        android:layout_alignBottom="@+id/signUpButton"
+        android:layout_alignEnd="@+id/imageView"
+        android:onClick="login"
+        android:text="Ok, Login"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
